@@ -1,0 +1,37 @@
+version: "3"
+services:
+  strapi:
+    container_name: cms-strapi-production
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: merge-strapi-prod:latest
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      APP_KEYS: ${APP_KEYS}
+      NODE_ENV: ${NODE_ENV}
+    # Only add expose when working with reverse proxy. Expose only the container PORT
+    expose:
+      - "1337"
+    #Expose container and host PORT only if not using reverse proxy.
+    #ports:
+    # - "1337:1337"
+    networks:
+    # Change network with your project and network name
+      - cms-merge-network
+
+networks:
+  # Change network here too. This network should exists before running this compose project
+  cms-merge-network:
+    name: cms-merge-network
+    driver: bridge
+    external: true
