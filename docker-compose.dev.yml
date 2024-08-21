@@ -1,11 +1,10 @@
-version: "3"
 services:
   strapi:
     container_name: cms-strapi-development
     build:
       context: .
       dockerfile: Dockerfile.dev
-    image: merge-strapi-dev:latest
+    image: cms-strapi-dev:latest
     restart: unless-stopped
     env_file: .env
     environment:
@@ -26,6 +25,7 @@ services:
       - ./yarn.lock:/opt/yarn.lock
       - ./.env:/opt/app/.env
       - ./public/uploads:/opt/app/public/uploads
+      - ./.tmp:/.tmp
     ports:
       - "1337:1337"
     networks:
