@@ -26,13 +26,13 @@ services:
     #Expose container and host PORT only if not using reverse proxy.
     #ports:
     # - "1337:1337"
-    #networks:
+    networks:
     # Change network with your project and network name
-    #  - cms-merge-network
+      - reverse-proxy-network
 
-#networks:
+networks:
   # Change network here too. This network should exists before running this compose project
-  #cms-server-network:
-  #  name: cms-merge-network
-  #  driver: bridge
-  #  external: true
+  reverse-proxy-network:
+    name: reverse-proxy-network
+    driver: bridge
+    external: true
