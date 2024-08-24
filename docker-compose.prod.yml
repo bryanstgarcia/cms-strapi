@@ -42,4 +42,4 @@ networks:
   reverse-proxy-network:
     name: reverse-proxy-network
     driver: bridge
-    external: false
+    external: true
