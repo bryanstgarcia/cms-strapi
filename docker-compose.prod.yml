@@ -16,8 +16,8 @@ services:
       ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
       APP_KEYS: ${APP_KEYS}
       NODE_ENV: ${NODE_ENV}
-    volumes:
-      - db_sqlite:/opt/app/data/
+#    volumes:
+#      - db_sqlite:/opt/app/data/
     # Only add expose when working with reverse proxy. Expose only the container PORT
     expose:
       - "1337"
@@ -28,13 +28,13 @@ services:
     # Change network with your project and network name
       - reverse-proxy-network
 
-volumes:
-  db_sqlite:
-    driver: local
-    driver_opts:
-      type: none
-      device: ${HOST_VOLUME_PATH}
-      o: bind
+#volumes:
+#  db_sqlite:
+#    driver: local
+#    driver_opts:
+#      type: none
+#      device: ${HOST_VOLUME_PATH}
+#      o: bind
 
 networks:
   # Change network here too. This network should exists before running this compose project
