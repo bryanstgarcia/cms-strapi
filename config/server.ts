@@ -1,7 +1,15 @@
+
+const assignProductionUrl = ({ env }) => {
+  const urlProduction = env('NODE_ENV') === "production" ? {
+    url: "https://api.bryanstgarcia.com",
+  } : {}
+  return urlProduction
+}
+
 export default ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
-  url: "https://api.bryanstgarcia.com",
+  ...assignProductionUrl({ env }),
   app: {
     keys: env.array('APP_KEYS'),
   },
