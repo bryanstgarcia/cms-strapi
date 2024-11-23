@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "BlogData": {
+    "blogData": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -25,7 +25,7 @@
       "type": "richtext",
       "required": true
     },
-    "Title": {
+    "title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -34,7 +34,7 @@
       "type": "string",
       "required": true
     },
-    "ShortDescription": {
+    "shortDescription": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -43,7 +43,7 @@
       "type": "text",
       "required": true
     },
-    "ImageUlr": {
+    "imageUrl": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -52,7 +52,7 @@
       "type": "string",
       "required": true
     },
-    "ImageAlt": {
+    "imageAlt": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -68,7 +68,6 @@
         }
       },
       "type": "uid",
-      "targetField": "Title",
       "required": true
     },
     "author": {

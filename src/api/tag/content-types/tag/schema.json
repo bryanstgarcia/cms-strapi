@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tag",
     "pluralName": "tags",
-    "displayName": "Tag"
+    "displayName": "Tag",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +16,7 @@
     }
   },
   "attributes": {
-    "Name": {
+    "name": {
       "pluginOptions": {
         "i18n": {
           "localized": true

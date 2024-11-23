@@ -4,18 +4,19 @@
   "info": {
     "singularName": "author",
     "pluralName": "authors",
-    "displayName": "Author"
+    "displayName": "Author",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "ShortDescription": {
+    "shortDescription": {
       "type": "text"
     },
     "imageUrl": {
