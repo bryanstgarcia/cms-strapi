@@ -20,5 +20,15 @@ export default factories.createCoreController(
 
       return this.transformResponse(sanitizedEntity);
     },
+
+    async find(ctx) {
+      const entity = await strapi.db.query("api::blog.blog").findMany({
+        // Line to populate the relationships
+        populate: { tags: true, author: true },
+      });
+      const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
+
+      return this.transformResponse(sanitizedEntity);
+    },
   })
 );
