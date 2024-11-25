@@ -32,7 +32,8 @@
         }
       },
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "shortDescription": {
       "pluginOptions": {
@@ -81,6 +82,16 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "blogs"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "unique": true,
+      "required": true
     }
   }
 }
