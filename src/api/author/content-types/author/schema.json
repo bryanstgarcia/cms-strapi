@@ -23,9 +23,9 @@
       "type": "string",
       "required": false
     },
-    "blog": {
+    "blogs": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "author"
     }

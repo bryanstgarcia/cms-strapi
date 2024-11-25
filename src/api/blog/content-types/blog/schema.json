@@ -73,9 +73,9 @@
     },
     "author": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::author.author",
-      "inversedBy": "blog"
+      "inversedBy": "blogs"
     },
     "tags": {
       "type": "relation",
