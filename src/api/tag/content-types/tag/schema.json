@@ -31,6 +31,16 @@
       "relation": "manyToMany",
       "target": "api::blog.blog",
       "mappedBy": "tags"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "name",
+      "required": true
     }
   }
 }

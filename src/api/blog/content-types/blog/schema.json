@@ -62,14 +62,15 @@
       "type": "string",
       "required": true
     },
-    "path": {
+    "slug": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "uid",
-      "required": true
+      "required": true,
+      "targetField": "title"
     },
     "author": {
       "type": "relation",
@@ -82,16 +83,6 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "blogs"
-    },
-    "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "unique": true,
-      "required": true
     }
   }
 }

@@ -28,6 +28,15 @@
       "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "author"
+    },
+    "webAddress": {
+      "type": "string"
+    },
+    "githubUrl": {
+      "type": "string"
+    },
+    "linkedInUrl": {
+      "type": "string"
     }
   }
 }
