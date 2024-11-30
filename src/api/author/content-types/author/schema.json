@@ -33,10 +33,13 @@
       "type": "string"
     },
     "githubUrl": {
-      "type": "string"
+      "type": "string",
+      "required": false,
+      "unique": true
     },
     "linkedInUrl": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     }
   }
 }
