@@ -40,6 +40,10 @@
     "linkedInUrl": {
       "type": "string",
       "unique": true
+    },
+    "role": {
+      "type": "string",
+      "required": false
     }
   }
 }
